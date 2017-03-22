@@ -67,6 +67,14 @@ predicted = [predictor.__next__() for i in range(len(X['test']))]
 #print ("MSE: %f" % score)
 
 
+
+plt.subplot(2,1,1)
+plt.plot(y['train'],'r-', label='Train')#ax1.plot(xlabels,predicted,'r-')
+plt.title('Train')
+plt.subplot(2,1,2)
+plt.plot(y['val'],'r-', label='Validation')#ax1.plot(xlabels,predicted,'r-')
+plt.title('Validation')
+
 fig, ax1 = plt.subplots()
 plot_predicted,=ax1.plot(predicted,'r-', label='Predicted')#ax1.plot(xlabels,predicted,'r-')
 ax1.set_ylabel('Predicted', color='r')
